@@ -1,17 +1,58 @@
 $(function(){
 
 
+// var Pie = {
+//   "type": "pie",
+//   "theme": "light",
+//   "dataProvider": [ {
+//     "country": "Lithuania",
+//     "litres": 501.9
+//   }, {
+//     "country": "Czech Republic",
+//     "litres": 301.9
+//   }, {
+//     "country": "Ireland",
+//     "litres": 201.1
+//   }, {
+//     "country": "Germany",
+//     "litres": 165.8
+//   }, {
+//     "country": "Australia",
+//     "litres": 139.9
+//   }, {
+//     "country": "Austria",
+//     "litres": 128.3
+//   }, {
+//     "country": "UK",
+//     "litres": 99
+//   }, {
+//     "country": "Belgium",
+//     "litres": 60
+//   }, {
+//     "country": "The Netherlands",
+//     "litres": 50
+//   } ],
+//   "valueField": "litres",
+//   "titleField": "country",
+//    "balloon":{
+//    "fixedPosition":true
+//   },
+//   "export": {
+//     "enabled": true
+//   }
+// }
+
 var Pie = {
   "type": "pie",
   "theme": "light",
   "dataProvider": [ {
-    "country": "Lithuania",
+    "country": "Creators",
     "litres": 501.9
   }, {
-    "country": "Czech Republic",
+    "country": "Character",
     "litres": 301.9
   }, {
-    "country": "Ireland",
+    "country": "Series",
     "litres": 201.1
   }, {
     "country": "Germany",
@@ -41,16 +82,15 @@ var Pie = {
     "enabled": true
   }
 }
-
 var marvelchart = Object.create(Pie);
 marvelchart = {
   "theme": "dark",
 };
 
-
+var chart = AmCharts.makeChart( "chartdiv", Pie);
 
 function viewCharts(topic){
-  var chart = AmCharts.makeChart( "chartdiv", Pie.topic+'chart' );
+  var chart = AmCharts.makeChart( "chartdiv", Pie);
 }
 
 function getRequest(searchTerm, pageToken) {
@@ -89,15 +129,14 @@ function selectGet(apiSelected){
 
   else if (apiSelected == 'marvel'){
   var url = 'http://gateway.marvel.com:80/v1/public/characters';
+  var privateKey = 'ef9561628f5de17da7dc979e830fe93c2a1962a0';
   var params = {
-    apiKey: 'ad6db08464ed1fdeb0350ccb3488b073',
-    privateKey: 'ef9561628f5de17da7dc979e830fe93c2a1962a0',
-    ts: '1',
-    hash: this.ts+this.privateKey+this.apiKey
-  };
-}
+    apikey: 'ad6db08464ed1fdeb0350ccb3488b073',
+    ts: Date.now(),
+    }
+    params.hash = md5(params.ts+privateKey+params.apikey);
+  }
 
-  console.log(url);
 
   $.getJSON(url, params, function(data){
     // viewCharts(data.items);
@@ -110,7 +149,7 @@ function selectGet(apiSelected){
 // 1. Start here
 $('form').submit(function(choice){
   var topic = $('input:checked').val();
-  console.log(topic);
+  // console.log(topic);
   selectGet(topic);
   $('input:checked').prop('checked', false);
 });
