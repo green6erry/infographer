@@ -112,7 +112,7 @@ $.each(items, function(index, value){
     title = '<b>'+result.Title+'<br>'+result.Year+'</b><br>';
     desc = '<em>('+result.Type+')</em><br>';
 
-    site = "http://www.imdb.com";
+
     logoPic = 'images/imdb.png';
     logo = '<a href="'+site+'" target="_blank"><div class="logo" style="background-image: url('+logoPic+'); background-size: 80%;"></div></a>';
 
