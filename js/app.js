@@ -271,7 +271,7 @@ $('input[type="text"]').focus();
 $('form').submit(function(event){
   event.preventDefault();
   var searchTerm = $('input[type="text"]').val();
-  doStuff('spider-man');
+  doStuff(searchTerm);
   $('input[type="text"]').val('');
 });
 
