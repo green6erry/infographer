@@ -34,6 +34,7 @@ body, li, nav {
 		margin: 0;
 		float: left;
 		padding: 7px 0 0 10px;
+		font-size: 30px;
 		position: fixed;
 		z-index: -1;
 		color: blanchedalmond;
