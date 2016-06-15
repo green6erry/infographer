@@ -1,0 +1,128 @@
+/*font: Raleway*/
+
+.margin-center{
+	margin-right: auto;
+	margin-left: auto;
+}
+.raleway {
+	font-family: 'Raleway', Georgia, sans-serif;
+}
+
+body {
+
+	list-style-type: none;
+	margin-top: 0;
+	.margin-center;
+	text-align: center;
+	overflow: auto;
+	.raleway;
+	text-decoration: none;
+	color: inherit;
+
+	h1 {
+		margin: 0;
+		float: left;
+		padding: 7px 0 0 10px;
+		font-size: 30px;
+		position: fixed;
+		z-index: -1;
+		color: blanchedalmond;
+	}
+	
+	main {
+		margin: auto 2em;
+
+		.grid{
+
+			.entry {
+				background-color: cornsilk;
+				padding: 1em;
+				margin: 1em;
+				overflow: auto;
+
+
+				b {
+					font-weight: 900;
+				}
+
+				a {
+					.logo {
+						width: 200px;
+						height: 90px;
+						background-repeat: no-repeat;
+						box-sizing: content-box;
+						margin: auto;
+
+					}
+
+					.thumb {
+						width: 200px;
+						height: 200px;
+						background-position: 50%;
+						float:left;
+						padding: 1em;
+						margin: 1em;
+						background-repeat: no-repeat;
+
+						p {
+							margin: 1em;
+							display: inline-block;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	nav {
+
+		background-color: gold;
+		z-index: 100;
+		list-style-type: none;
+		margin-top: 0;
+		.margin-center;
+		text-align: center;
+		overflow: auto;
+		.raleway;
+		text-decoration: none;
+
+
+		h1 {
+			margin: 0;
+			float: left;
+			padding: 7px 0 0 11px;
+			position: static;
+			font-size: 30px;
+			color: black;
+		}
+
+		* {
+			display: inline-block;
+
+			* {
+				display: inline-block;
+			}
+		}
+
+		ol {
+		 	top: .4em;
+			right: .7em;
+
+			li {
+				padding: 0 1em;
+				text-transform: uppercase;
+				color: gray;
+				list-style-type: none;
+				margin-top: 0;
+				.margin-center;
+				text-align: center;
+				overflow: auto;
+				.raleway;
+				text-decoration: none;
+				color: inherit;
+			}
+		 }
+	}
+}
+
