@@ -1,3 +1,8 @@
+
+var $ = require('jquery');
+var async = require('async');
+var md5 = require('md5');
+
 $(function(){
 
 
