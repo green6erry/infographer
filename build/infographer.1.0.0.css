@@ -1,0 +1,105 @@
+/*font: Raleway*/
+.margin-center {
+  margin-right: auto;
+  margin-left: auto;
+}
+.raleway {
+  font-family: 'Raleway', Georgia, sans-serif;
+}
+body {
+  list-style-type: none;
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  overflow: auto;
+  font-family: 'Raleway', Georgia, sans-serif;
+  text-decoration: none;
+  color: inherit;
+}
+body h1 {
+  margin: 0;
+  float: left;
+  padding: 7px 0 0 10px;
+  font-size: 30px;
+  position: fixed;
+  z-index: -1;
+  color: blanchedalmond;
+}
+body main {
+  margin: auto 2em;
+}
+body main .grid .entry {
+  background-color: cornsilk;
+  padding: 1em;
+  margin: 1em;
+  overflow: auto;
+}
+body main .grid .entry b {
+  font-weight: 900;
+}
+body main .grid .entry a .logo {
+  width: 200px;
+  height: 90px;
+  background-repeat: no-repeat;
+  box-sizing: content-box;
+  margin: auto;
+}
+body main .grid .entry a .thumb {
+  width: 200px;
+  height: 200px;
+  background-position: 50%;
+  float: left;
+  padding: 1em;
+  margin: 1em;
+  background-repeat: no-repeat;
+}
+body main .grid .entry a .thumb p {
+  margin: 1em;
+  display: inline-block;
+}
+body nav {
+  background-color: gold;
+  z-index: 100;
+  list-style-type: none;
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  overflow: auto;
+  font-family: 'Raleway', Georgia, sans-serif;
+  text-decoration: none;
+}
+body nav h1 {
+  margin: 0;
+  float: left;
+  padding: 7px 0 0 11px;
+  position: static;
+  font-size: 30px;
+  color: black;
+}
+body nav * {
+  display: inline-block;
+}
+body nav * * {
+  display: inline-block;
+}
+body nav ol {
+  top: .4em;
+  right: .7em;
+}
+body nav ol li {
+  padding: 0 1em;
+  text-transform: uppercase;
+  color: gray;
+  list-style-type: none;
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  overflow: auto;
+  font-family: 'Raleway', Georgia, sans-serif;
+  text-decoration: none;
+  color: inherit;
+}
+/*# sourceMappingURL=infographer.1.0.0.css.map */
